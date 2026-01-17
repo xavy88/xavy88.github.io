@@ -11433,3 +11433,19 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.project-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-left: 4px solid #bd5d38;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons .btn {
+  margin-bottom: 0.5rem;
+}
