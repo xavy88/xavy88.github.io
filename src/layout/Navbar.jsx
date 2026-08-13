@@ -31,10 +31,15 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
-          href="#"
+          href="www.linkedin.com/in/francisco-javier-urbina-blandón-82475492"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+           <img
+          src="/logo.png"
+          width={80}
+          height={80}
+          alt="Logo"
+        />
         </a>
 
         {/* Desktop Nav */}
