@@ -10,6 +10,17 @@ import {
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
+  "Google Analytic",
+  "Google Search Console",
+  "Google Tag Manager",
+  "Looker Studio",
+  "Google Business Profile",
+  "Microsoft Clarity",
+  "Ahref",
+  "SEMRush",
+  "Moz",
+  "SERanking",
+  "Screaming Frog",
   "React",
   "Next.js",
   "TypeScript",
@@ -40,7 +51,7 @@ export const Hero = () => {
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background" />
       </div>
 
       {/* Green Dots */}
@@ -52,9 +63,8 @@ export const Hero = () => {
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20
+                }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -69,25 +79,24 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+               Software Engineer - Senior SEO - Web Development - AI
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+              <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold leading-tight animate-fade-in animation-delay-100">
+                <span className="text-primary glow-text">Senior SEO & WordPress Lead
+                  AI-Driven SEO Strategies
+                  Technical SEO, Growth & Performance Optimization</span>
                 <br />
-                experiences with
                 <br />
-                <span className="font-serif italic font-normal text-white">
-                  precision.
-                </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Javier Urbina — a Senior SEO & Web Development Lead with 9+ years of experience defining
+                and executing AI-driven SEO strategies for medium-sized businesses and large clients. Proven track
+                record in increasing organic visibility, qualified traffic, and lead generation through data-driven,
+                technical SEO approaches.
               </p>
             </div>
 
@@ -98,7 +107,7 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
-                Download CV
+                <a href="/CV.pdf" download>Download CV </a>
               </AnimatedBorderButton>
             </div>
 
@@ -126,15 +135,15 @@ export const Hero = () => {
             <div className="relative max-w-md mx-auto">
               <div
                 className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
+              rounded-3xl bg-linear-to-br 
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
-                  alt="Pedro Machado"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  src="/Img-Profile.jpg"
+                  alt="Javier Urbina"
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
@@ -148,7 +157,7 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">9+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>
@@ -166,15 +175,15 @@ export const Hero = () => {
           <div className="relative overflow-hidden">
             <div
               className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
+             bg-linear-to-r from-background to-transparent z-10"
             />
             <div
               className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
+             bg-linear-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={idx} className="shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
