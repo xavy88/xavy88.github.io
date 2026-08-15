@@ -14,19 +14,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "xavyurbina88@gmail.com",
+    href: "mailto:xavyurbina88@gmail.comm",
   },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
-  },
+  // {
+  //   icon: Phone,
+  //   label: "Phone",
+  //   value: "+1 (555) 123-4567",
+  //   href: "tel:+15551234567",
+  // },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Nicaragua",
     href: "#",
   },
 ];
