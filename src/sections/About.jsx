@@ -1,28 +1,28 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { SearchCheck, BrainCircuit, Gauge, Workflow } from "lucide-react";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Clean Code",
+    icon: SearchCheck,
+    title: "SEO Strategy",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Driving sustainable organic growth through data-led SEO strategies, technical optimization, and search intelligence.",
   },
   {
-    icon: Rocket,
-    title: "Performance",
+    icon: BrainCircuit,
+    title: "AI & Automation",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Leveraging AI and automation to accelerate research, content optimization, audits, and digital workflows.",
   },
   {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    icon: Gauge,
+    title: "Web Performance",
+    description: "Building fast, scalable, conversion-focused websites with performance and technical SEO at the core.",
   },
   {
-    icon: Lightbulb,
-    title: "Innovation",
+    icon: Workflow,
+    title: "Growth & Leadership",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Leading teams and aligning SEO, development, and strategy to turn digital initiatives into measurable growth.",
   },
 ];
 
@@ -40,39 +40,30 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+             EXPERTISE 
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                 & IMPACT ·
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+               I currently lead both SEO and Web Development departments, aligning strategy, execution,
+                and automation to deliver search-optimized, fast, and conversion-focused websites for 
+                businesses ranging from startups to enterprise-level organizations.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
-              </p>
-              <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+              My expertise sits at the intersection of SEO, WordPress development, and AI implementation,
+               leveraging data, automation, and machine learning tools to improve keyword research, content 
+               optimization, technical audits, and overall service quality.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "I’m passionate about building intelligent, future-ready SEO and web solutions, leading teams,
+                 and helping businesses grow through performance-focused digital strategies."
               </p>
             </div>
           </div>

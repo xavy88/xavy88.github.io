@@ -9,36 +9,43 @@ import {
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
-const skills = [
-  "Google Analytic",
-  "Google Search Console",
-  "Google Tag Manager",
+const seoanalyticsskills = [
+  "GA4",
+  "GSC",
+  "GTM",
   "Looker Studio",
-  "Google Business Profile",
+  "GBP",
   "Microsoft Clarity",
   "Ahref",
   "SEMRush",
   "Moz",
   "SERanking",
   "Screaming Frog",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
+];
+
+const webdevelopmentskills = [
+  "HTML",
+  "JS",
+  "CSS",
+  "TS",
+  "Wordpress",
+  "Elementor",
+  "Divi",
+  "Shopify",
+  "Wix",
+  "Squarespace",
+  "Webflow",
+  "Photoshop",
+  "XD",
   "Figma",
-  "Git",
-  "GitHub Actions",
+];
+
+const aiautomationskills = [
+  "n8n",
+  "ChatGPT",
+  "Claude",
+  "Gemini",
+  "AI-powered SEO workflows",
 ];
 
 export const Hero = () => {
@@ -75,20 +82,18 @@ export const Hero = () => {
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-2">
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-               Software Engineer - Senior SEO - Web Development - AI
+                Software Engineer - Senior SEO - Web Development - AI
               </span>
             </div>
 
             {/* Headline */}
-            <div className="space-y-4">
+            <div className="">
               <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold leading-tight animate-fade-in animation-delay-100">
-                <span className="text-primary glow-text">Senior SEO & WordPress Lead
-                  AI-Driven SEO Strategies
-                  Technical SEO, Growth & Performance Optimization</span>
+                <span className="text-primary glow-text">Senior SEO & Web Development Lead · AI-Driven Growth</span>
                 <br />
                 <br />
               </h1>
@@ -102,9 +107,11 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              < a href="/#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 <a href="/CV.pdf" download>Download CV </a>
@@ -115,9 +122,9 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/xavy88" },
+                { icon: Linkedin, href: "www.linkedin.com/in/francisco-javier-urbina-blandón-82475492" },
+                { icon: Twitter, href: "www.linkedin.com/in/francisco-javier-urbina-blandón-82475492" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -167,10 +174,13 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section - SEO & Analytics */}
         <div className="mt-20 animate-fade-in animation-delay-600">
-          <p className="text-sm text-muted-foreground mb-6 text-center">
-            Technologies I work with
+          <h2 className=" text-center text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+            Skills
+          </h2>
+          <p className="text-4xl md:text-4xl font-bold mt-4 animate-fade-in animation-delay-100 text-white mb-6 text-center">
+            SEO & Analytics
           </p>
           <div className="relative overflow-hidden">
             <div
@@ -182,10 +192,61 @@ export const Hero = () => {
              bg-linear-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, idx) => (
+              {[...seoanalyticsskills, ...seoanalyticsskills].map((seoanalyticsskills, idx) => (
                 <div key={idx} className="shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
+                    {seoanalyticsskills}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Skills Section - Web Development */}
+        <div className="mt-5 animate-fade-in animation-delay-600">
+          <p className="text-4xl md:text-4xl font-bold mt-4 animate-fade-in animation-delay-100 text-white mb-6 text-center">
+            Web Development & CMS
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-linear-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-linear-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...webdevelopmentskills, ...webdevelopmentskills].map((webdevelopmentskills, idx) => (
+                <div key={idx} className="shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {webdevelopmentskills}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Skills Section - AI & Automation */}
+        <div className="mt-5 animate-fade-in animation-delay-600">
+          <p className="text-4xl md:text-4xl font-bold mt-4 animate-fade-in animation-delay-100 text-white mb-6 text-center">
+            AI & Automation
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-linear-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-linear-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...aiautomationskills, ...aiautomationskills].map((aiautomationskills, idx) => (
+                <div key={idx} className="shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {aiautomationskills}
                   </span>
                 </div>
               ))}
@@ -193,7 +254,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
       animate-fade-in animation-delay-800"
