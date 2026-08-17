@@ -1,39 +1,44 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import { useEffect } from "react";
+
+import GLightbox from "glightbox";
+import "glightbox/dist/css/glightbox.min.css";
+
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "SEO Data Dashboard",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "",
     image: "/projects/SEOProject-1.jpeg",
-    tags: ["React", "Typescript", "NodeJS"],
+    tags: ["SEO", "GSC", "Ahref"],
     link: "#",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "SEO Data Dashboard",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "",
     image: "/projects/SEOProject-2.jpeg",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tags: ["SEO", "GSC", "Ahref"],
     link: "#",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "SEO Data Dashboard",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "",
     image: "/projects/SEOProject-5.jpeg",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    tags: ["SEO", "GSC", "Ahref"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "SEO Data Dashboard",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "",
     image: "/projects/SEOProject-6.jpeg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: ["SEO", "GSC", "Ahref"],
     link: "#",
     github: "#",
   },
@@ -41,74 +46,87 @@ const projects = [
 
 const weprojects = [
   {
-    title: "Temp 1",
+    title: "Concrete & Demolition Website",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "",
     image: "/projects/WebProject-1.jpeg",
     tags: ["Wordpress", "Divi", "UI/UX"],
     link: "#",
     github: "#",
   },
   {
-    title: "Temp 2",
-    description:
-      "temp",
+    title: "General Construction Website",
+    description: "",
     image: "/projects/WebProject-2.jpeg",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Construction Website",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "",
     image: "/projects/WebProject-3.jpeg",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Nail Salon Website",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "",
     image: "/projects/WebProject-4.jpeg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "General Contracting Website",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "",
     image: "/projects/WebProject-5.jpeg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Painting Website",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/WebProject-6.jpeg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+      "",
+      image: "/projects/WebProject-6.jpeg",
+    tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
   },
 ];
 
-
 export const Projects = () => {
+  useEffect(() => {
+    const lightbox = GLightbox({
+      selector: ".project-lightbox",
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+    });
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
+
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header SEO */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             SEO WORK
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Projects that
             <span className="font-serif italic font-normal text-white">
@@ -116,8 +134,11 @@ export const Projects = () => {
               Results, built to perform.
             </span>
           </h2>
+
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of SEO growth metrics and websites I’ve built, optimized, and improved — combining technical execution with data-driven search strategy.
+            A selection of SEO growth metrics and websites I’ve built,
+            optimized, and improved — combining technical execution with
+            data-driven search strategy.
           </p>
         </div>
 
@@ -131,31 +152,65 @@ export const Projects = () => {
             >
               {/* Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <a
+                  href={project.image}
+                  className="project-lightbox block w-full h-full cursor-zoom-in"
+                  data-gallery="seo-projects"
+                  data-title={project.title}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-110"
+                  />
+                </a>
+
+                {/* Gradient */}
                 <div
-                  className="absolute inset-0 
-                bg-linear-to-t from-card via-card/50
-                 to-transparent opacity-60"
+                  className="
+                    absolute inset-0
+                    bg-linear-to-t from-card via-card/50 to-transparent
+                    opacity-60
+                    pointer-events-none
+                  "
                 />
+
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <div
+                  className="
+                    absolute inset-0
+                    flex items-center justify-center gap-4
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-300
+                    pointer-events-none
+                  "
+                >
                   <a
                     href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="
+                      p-3 rounded-full glass
+                      hover:bg-primary
+                      hover:text-primary-foreground
+                      transition-all
+                      pointer-events-auto
+                    "
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
+
                   <a
                     href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="
+                      p-3 rounded-full glass
+                      hover:bg-primary
+                      hover:text-primary-foreground
+                      transition-all
+                      pointer-events-auto
+                    "
                   >
                     <Github className="w-5 h-5" />
                   </a>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
@@ -164,16 +219,23 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
+
                   <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
+                    className="
+                      w-5 h-5
+                      text-muted-foreground
+                      group-hover:text-primary
+                      group-hover:translate-x-1
+                      group-hover:-translate-y-1
+                      transition-all
+                    "
                   />
                 </div>
+
                 <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span
@@ -189,23 +251,25 @@ export const Projects = () => {
           ))}
         </div>
 
-
-
-
-           {/* Section Header Web */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
+        {/* Section Header Web */}
+        <div className="text-center mx-auto max-w-3xl mb-16 mt-32">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            SEO WORK
+            WORDPRESS WEB DESIGN
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            Websites built to rank,
             <span className="font-serif italic font-normal text-white">
               {" "}
-              Results, built to perform.
+              perform, and convert.
             </span>
           </h2>
+
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of SEO growth metrics and websites I’ve built, optimized, and improved — combining technical execution with data-driven search strategy.
+            A selection of WordPress websites I’ve designed, built, and
+            optimized with Elementor and Divi — combining SEO best practices,
+            technical performance, user experience, and conversion-focused
+            design to turn organic traffic into results.
           </p>
         </div>
 
@@ -219,31 +283,65 @@ export const Projects = () => {
             >
               {/* Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <a
+                  href={project.image}
+                  className="project-lightbox block w-full h-full cursor-zoom-in"
+                  data-gallery="web-projects"
+                  data-title={project.title}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-scale-down transition-transform duration-700 group-hover:scale-110"
+                  />
+                </a>
+
+                {/* Gradient */}
                 <div
-                  className="absolute inset-0 
-                bg-linear-to-t from-card via-card/50
-                 to-transparent opacity-60"
+                  className="
+                    absolute inset-0
+                    bg-linear-to-t from-card via-card/50 to-transparent
+                    opacity-60
+                    pointer-events-none
+                  "
                 />
+
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <div
+                  className="
+                    absolute inset-0
+                    flex items-center justify-center gap-4
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-300
+                    pointer-events-none
+                  "
+                >
                   <a
                     href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="
+                      p-3 rounded-full glass
+                      hover:bg-primary
+                      hover:text-primary-foreground
+                      transition-all
+                      pointer-events-auto
+                    "
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
+
                   <a
                     href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="
+                      p-3 rounded-full glass
+                      hover:bg-primary
+                      hover:text-primary-foreground
+                      transition-all
+                      pointer-events-auto
+                    "
                   >
                     <Github className="w-5 h-5" />
                   </a>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
@@ -252,16 +350,23 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
+
                   <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
+                    className="
+                      w-5 h-5
+                      text-muted-foreground
+                      group-hover:text-primary
+                      group-hover:translate-x-1
+                      group-hover:-translate-y-1
+                      transition-all
+                    "
                   />
                 </div>
+
                 <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span
@@ -279,10 +384,12 @@ export const Projects = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
+          <a href="/#contact">
           <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
+            Contact me
+            <ArrowDown className="w-5 h-5" />
           </AnimatedBorderButton>
+          </a>
         </div>
       </div>
     </section>

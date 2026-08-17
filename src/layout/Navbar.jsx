@@ -6,7 +6,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#certifications", label: "Certifications" },
 ];
 
 export const Navbar = () => {
@@ -31,7 +31,7 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
-          href="www.linkedin.com/in/francisco-javier-urbina-blandón-82475492"
+          href="/"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
            <img
