@@ -49,7 +49,7 @@ const weprojects = [
     title: "Concrete & Demolition Website",
     description:
       "",
-    image: "/projects/WebProject-1.jpeg",
+    image: "/projects/WebProject-1.jpg",
     tags: ["Wordpress", "Divi", "UI/UX"],
     link: "#",
     github: "#",
@@ -57,7 +57,7 @@ const weprojects = [
   {
     title: "General Construction Website",
     description: "",
-    image: "/projects/WebProject-2.jpeg",
+    image: "/projects/WebProject-2.jpg",
     tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
@@ -66,7 +66,7 @@ const weprojects = [
     title: "Construction Website",
     description:
       "",
-    image: "/projects/WebProject-3.jpeg",
+    image: "/projects/WebProject-3.jpg",
     tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
@@ -75,7 +75,7 @@ const weprojects = [
     title: "Nail Salon Website",
     description:
       "",
-    image: "/projects/WebProject-4.jpeg",
+    image: "/projects/WebProject-4.jpg",
     tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
@@ -84,7 +84,7 @@ const weprojects = [
     title: "General Contracting Website",
     description:
       "",
-    image: "/projects/WebProject-5.jpeg",
+    image: "/projects/WebProject-5.jpg",
     tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
@@ -93,7 +93,7 @@ const weprojects = [
     title: "Painting Website",
     description:
       "",
-      image: "/projects/WebProject-6.jpeg",
+      image: "/projects/WebProject-6.jpg",
     tags: ["Wordpress", "Divi", "UI/UX", "Performance"],
     link: "#",
     github: "#",
